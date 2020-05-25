@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>KONTINUUM</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- snippet from https://codepen.io/mutedblues/pen/MmPNPG -->
+
+  <header id="header" class="header">
+    <a href="#home" onclick="showPage('home')" class="logo">
+      <img id="logo_1" src="img/logo-kontinuum.jpg" alt="logo">
+      <img id="logo_2" src="img/logo-kontinuum-with-text.png" alt="logo">
+    </a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul id="menu" class="menu">
+      <li> <a href="#home" onclick="showPage('home')">ARTISTS</a></li>
+      <li> <a href="#tickets" onclick="showPage('tickets')">TICKETS</a></li>
+      <li> <a href="#location" onclick="showPage('location')">LOCATION</a> </li>
+      <li> <a href="#about" onclick="showPage('about')">ABOUT</a> </li>
+      <li> <a href="#contact" class="no-border" onclick="showPage('contact')">CONTACT</a> </li>
+    </ul>
+  </header>
+
+  <div class="canvas-wrapper pointer" onclick="plusOneCubeNumber()">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div class="left-side-element">
+    <h2>One day festival for:</h2>
+    <h2> ART | MUSIC | LIGHTS | INTERACTIVENESS </h2>
+    <h2> VIDEO | DANCING | HANGING OUT </h2>
+
+    <a href="#tickets" id="CTA-about" class="pointer" onclick="showPage('tickets')">Read More</a>
+
+  </div>
+  <!-- pages -->
+  <div id="pages-wrapper">
+    <!-- home page -->
+    <article id="home" class="page">
+      <div id="home-header" class="background-color-black" onclick="goToArtists()">
+        <div id="home-header-arrow" class="read-more-triangle color-white"></div>
+      </div>
+
+      <div class="welcome-post">
+        <img src="img/poster-kontinuum.jpg">
+      </div>
+
+      <div id="grid-container">
+      </div>
+
+      <div id="home-footer" class="background-color-black pointer" onclick="toTheTop()">
+        <p>Back to top of page</p>
+      </div>
+      <footer id="footer" class="footer-nav default">
+        <article class="sponsor-footer">
+          <h3>In collaboration with:</h3>
+          <div class="footer-container">
+            <a href="https://www.koda.dk/medlem/sog-stotte/koda-kultur">
+              <img src="img/koda_kultur_logo.png" alt="koda logo">
+            </a>
+            <a href="https://www.kunst.dk/">
+              <img src="img/statens.jpg" alt="statens institut for kunst logo">
+            </a>
+            <a href="https://www.tuborgfondet.dk/">
+              <img src="img/Tuborgfondet.jpg" alt="tuborgfondets logo">
+            </a>
+            <a href="https://www.aarhus.dk/">
+              <img src="img/aarhus_kommune.jpg" alt="aarhus kommune logo">
+            </a>
+          </div>
+        </article>
+        <article class="sub-footer background-color-black color-white">
+          <h3>Contact</h3>
+          <div class="footer-container">
+            <a href="mailto:contact@kontinuum.one">contact@kontinuum.one</a>
+            |
+            <a href="tel:+4526272829">+45 26 27 28 29</a>
+            |
+            <a href="https://data.virk.dk/">CVR.: 173494712</a>
+          </div>
+        </article>
+      </footer>
+
+    </article>
+
+    <!-- tickets page -->
+    <article id="tickets" class="page">
+      <h3>TICKETS</h3>
+      <p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
+        omnis
+        iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+        aspernatur
+        aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt
+        ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+    </article>
+
+    <!-- location page -->
+    <article id="location" class="page">
+      <h3>LOCATION</h3>
+      <p>Hmm, there should be some clients right here...</p>
+    </article>
+
+    <!-- about page -->
+    <article id="about" class="page">
+      <h3>ABOUT</h3>
+    </article>
+
+    <!-- contact page -->
+    <article id="contact" class="page">
+      <h3>CONTACT</h3>
+    </article>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="javascript/fetch.js"></script>
+  <script src="./build/three.js"></script>
+  <script src="./build/three.min.js"></script>
+  <script src="javascript/three_custom.js"></script>
+  <script src="javascript/javascript.js"></script>
+</body>
+
+</html>
