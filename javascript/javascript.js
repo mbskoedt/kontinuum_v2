@@ -12,6 +12,13 @@ function hideAllPages() {
 function showPage(pageId) {
   hideAllPages();
   document.querySelector(`#${pageId}`).style.display = "block";
+  let headerHeight = document.getElementById('header').offsetHeight - document.getElementById('menu').offsetHeight;
+  if (pageId === "home") {
+    document.querySelector(`#${pageId}`).style.marginTop = "90vh";
+  } else {
+    document.querySelector(`#${pageId}`).style.marginTop = headerHeight + "px";
+  }
+
   setActiveTab(pageId);
   collapseMenu();
 }
@@ -40,6 +47,11 @@ function setActiveTab(pageId) {
 
 setDefaultPage();
 
+/*
+let headerHeight = document.getElementById('header').offsetHeight;
+console.log(headerHeight);
+document.getElementById('pages-wrapper').style.marginTop = headerHeight + "px";
+*/
 
 // Burgermenu functionallity
 
@@ -65,3 +77,9 @@ function toTheTop() {
 function collapseMenu() {
   document.getElementById('menu-btn').checked = false;
 }
+
+// gives 100 pixels to href-requests
+
+window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 100);
+});

@@ -11,6 +11,7 @@ var x = window.matchMedia("(max-width: 780px)")
 x.addListener(mediaQuery) // Attach listener function on state changes
 
 function mediaQuery(x) {
+
   if (x.matches) {
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -20,6 +21,7 @@ function mediaQuery(x) {
     var height = window.innerHeight;
     var cubeSize = 70;
   }
+
 
   // Gradiant Sphere with three.js
 
