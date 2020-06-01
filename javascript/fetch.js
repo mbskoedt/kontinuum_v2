@@ -132,6 +132,7 @@ ${post.content.rendered}
     `;
     }
   }
+  window.instgrm.Embeds.process();
 }
 
 // Button animation
@@ -144,7 +145,6 @@ function displayMoreInfo(element) {
   for (let arrow of arrows) {
     if (id === arrow.id) {
       if (arrow.classList.contains("rotateDown")) {
-        instgrm.Embeds.process();
         arrow.classList.remove("rotateDown")
         arrow.classList.add("rotateTop");
       } else {
@@ -157,7 +157,8 @@ function displayMoreInfo(element) {
           if (moreInfo.classList.contains("displayBlock")) {
             moreInfo.classList.remove("displayBlock")
           } else {
-            moreInfo.classList.add("displayBlock")
+            moreInfo.classList.add("displayBlock");
+
           }
         }
       }

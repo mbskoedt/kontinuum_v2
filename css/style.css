@@ -165,6 +165,33 @@ button, button p {
   padding-left: 8px;
 }
 
+.close {
+  position: absolute;
+  right: 5%;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 30px;
+  width: 2px;
+  background-color: white;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+
 /* ----- SoundCloud ----- */
 .widget {
   width: 100%;
@@ -881,6 +908,10 @@ button {
 
 .cookie-options button {
   margin-right: 20px;
+}
+
+.cookie-alert a {
+  margin-top: 0;
 }
 
   /* ------ Other Styling ---- */
