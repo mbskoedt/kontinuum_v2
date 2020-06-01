@@ -2,8 +2,14 @@
 
 var cubeNumber = 1;
 
+var canvas = document.getElementById('canvas');
+const context = canvas.getContext('2d');
+
 function plusOneCubeNumber() {
   cubeNumber++;
+  console.log(canvas)
+  console.log(context)
+  context.clearRect(0, 0, canvas.width, canvas.height);
   mediaQuery(x);
 }
 
@@ -31,7 +37,8 @@ function mediaQuery(x) {
 
   var renderer = new THREE.WebGLRenderer({
     antialias: true,
-    alpha: true
+    alpha: true,
+    autoClear: true
   });
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap

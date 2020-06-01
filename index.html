@@ -31,6 +31,20 @@
       </ul>
     </header>
 
+    <div id="cookie-alert" class="cookie-alert">
+      <h5>Cookies</h5>
+      <div class="cookie-alert-content">
+        <p>This site uses Cookies to increase page performance.
+          Read more or just press "Alright". I mean we all do.</p>
+        <div class="cookie-options">
+          <button type="button" class="pointer">
+            <div class="color-white" onclick="closeCookies()">Alright</div>
+          </button>
+          <a href="https://seositecheckup.com/articles/how-page-caching-optimizes-your-site-performance" target="_blank">Read more</a>
+        </div>
+      </div>
+    </div>
+
     <div class="canvas-wrapper pointer" onclick="plusOneCubeNumber()">
       <canvas id="canvas"></canvas>
     </div>
@@ -39,7 +53,7 @@
       <h2> ART | MUSIC | LIGHTS | INTERACTIVENESS </h2>
       <h2> VIDEO | DANCING | HANGING OUT </h2>
 
-      <a href="#tickets" id="CTA-about" class="pointer" onclick="showPage('tickets')">Read More</a>
+      <a href="#about" id="CTA-about" class="pointer" onclick="showPage('about')">Read More</a>
 
     </div>
     <!-- pages -->
@@ -50,9 +64,11 @@
           <div id="home-header-arrow" class="read-more-triangle color-white"></div>
         </div>
 
-        <div class="welcome-post">
-          <img src="img/poster-kontinuum.jpg">
-        </div>
+          <div class="welcome-post">
+            <video autoplay loop muted>
+              <source src="video/bgr-video.mp4" type="video/mp4">
+            </video>
+          </div>
 
         <div id="grid-container">
         </div>
@@ -118,7 +134,7 @@
 
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script async src="//www.instagram.com/embed.js"></script>
+  <script async defer src="http://platform.instagram.com/en_US/embeds.js"></script>
   <script src="javascript/fetch.js"></script>
   <script src="./build/three.js"></script>
   <script src="./build/three.min.js"></script>

@@ -95,6 +95,76 @@ button, button p {
   padding: 0;
 }
 
+/* ----- Cookie alert ---- */
+.cookie-alert {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  color: black;
+  width: 100vw;
+  z-index: 100;
+}
+
+.displayNone {
+  animation: mymove 1s forwards;
+}
+
+@keyframes mymove {
+  from {bottom: 0px;}
+  to {bottom: -100vh;}
+}
+
+.cookie-alert h5 {
+  background-color: black;
+  width: 100vw;
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 15px;
+  font-size: large;
+}
+
+.cookie-alert-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5%;
+}
+
+.cookie-alert a {
+  text-decoration: none;
+  color: var(--green);
+  margin-top: 10px;
+}
+
+.cookie-alert p {
+  font-size: medium;
+}
+
+.cookie-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cookie-alert button {
+  background: linear-gradient(to bottom, #189056 5%, #48c3a7 100%);
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 10px 22px;
+  text-decoration: none;
+}
+
+.cookie-alert button div {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
 /* ----- SoundCloud ----- */
 .widget {
   width: 100%;
@@ -437,10 +507,11 @@ button {
   overflow: hidden;
 }
 
-.welcome-post img {
-  width: 150%;
-  height: auto;
+.welcome-post video {
+  max-width: 150%;
+  height: 100%;
 }
+
 
 #grid-container {
   width: 100vw;
@@ -579,19 +650,21 @@ button {
   max-height: 0;
   transition: max-height 0.35s ease-out;
   overflow: hidden;
-  margin: 7%;
+  margin-left: 7%;
+  margin-right: 7%;
   margin-top: 0;
 }
 
 .article-content {
-  margin-bottom: -7%;
-  padding-bottom: 8%;
+  padding-bottom: 4%;
+  padding-top: 4%;
   display: flex;
   flex-direction: column;
 }
 
 #grid-container .article-content {
   justify-content: center;
+  align-items: center;
 }
 
 .displayBlock {
@@ -714,6 +787,12 @@ button {
   min-height: 60vh;
 }
 
+/* ------- CONTACTS TAB ----- */
+#contact .article-content {
+  text-align: center !important;
+  align-items: center;
+}
+
 /* ------ FOOTER ----- */
 .footer-nav {
   z-index: 2;
@@ -789,6 +868,21 @@ button {
     border: 3px solid var(--scrollbarBG);
   }
 
+/* ---- Cookie alert ---- */
+.cookie-alert-content {
+  padding: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.cookie-options {
+  flex-direction: row;
+}
+
+.cookie-options button {
+  margin-right: 20px;
+}
+
   /* ------ Other Styling ---- */
   p {
     font-size: large;
@@ -808,9 +902,6 @@ button {
   }
 
   /* ---- page styling --- */
-  .welcome-post img {
-    width: 100%;
-  }
 
   .article-content {
     margin-top: 4%;
@@ -826,8 +917,7 @@ button {
     margin: 40px !important;
   }
 
-  .article-content .wp-block-embed-instagram  {
-    width: 90%;
+  .article-content .wp-block-embed-instagram {
     margin: 10%;
     margin-top: 0;
     margin-top: 0;
@@ -862,6 +952,7 @@ button {
   .sub-tabs-content {
     min-height: 70vw;
     text-align: justify;
+    padding-bottom: 15%;
   }
 
   /*----- FOOTER ---- */
@@ -893,6 +984,15 @@ button {
   /* for displayBlock boxes */
   .displayBlock::-webkit-scrollbar {
     display: none;
+  }
+
+  /*--- Cookies --- */
+  .cookie-alert-content {
+    justify-content: center;
+  }
+
+  .cookie-options button {
+    margin-left: 20px;
   }
 
   .header {
@@ -966,7 +1066,7 @@ button {
   .canvas-wrapper {
     display: block;
     width: 50vw;
-    height: 100vh;
+    height: 70vh;
     position: absolute;
     z-index: 20;
   }
@@ -978,6 +1078,11 @@ button {
 
   .welcome-post {
     width: 50vw;
+  }
+
+  .welcome-post video {
+    max-width: 120%;
+    height: 180%;
   }
 
   #home {
@@ -1066,7 +1171,6 @@ button {
 @media (min-width: 1700px) {
 
   /* ------ INSTAGRAM ----- */
-
   .footer-container a {
     font-size: small;
   }
@@ -1075,18 +1179,29 @@ button {
     background-size: 50% 2px;
   }
 
+  .sub-tabs-container h3 {
+    padding: 3%;
+  }
+
   #grid-container .article-content {
     flex-direction: row;
-    align-content: space-between;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .article-content p {
-    max-width: 45%;
+  .article-content figure {
+    width: 200%;
+    margin-right: 3%;
   }
 
-  .article-content .wp-block-embed-instagram  {
+  .article-content .wp-block-embed-instagram {
     width: 40%;
     height: 40%;
+    margin: 5%;
+  }
+
+  .article-content .wp-block-embed-instagram p {
+    margin: 0;
   }
 
   .sub-tabs-content {
@@ -1094,6 +1209,6 @@ button {
   }
 
   .sub-tabs-content .article-content p {
-    max-width: 100%!important;
+    max-width: 100% !important;
   }
 }

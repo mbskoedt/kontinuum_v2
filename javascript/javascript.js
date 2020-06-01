@@ -83,3 +83,10 @@ function collapseMenu() {
 window.addEventListener("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 100);
 });
+
+// close cookies
+
+function closeCookies() {
+    let cookieAlert = document.getElementById("cookie-alert");
+    cookieAlert.classList.add("displayNone");
+}
