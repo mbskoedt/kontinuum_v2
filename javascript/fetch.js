@@ -144,6 +144,7 @@ function displayMoreInfo(element) {
   for (let arrow of arrows) {
     if (id === arrow.id) {
       if (arrow.classList.contains("rotateDown")) {
+        instgrm.Embeds.process();
         arrow.classList.remove("rotateDown")
         arrow.classList.add("rotateTop");
       } else {
