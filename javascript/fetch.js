@@ -91,7 +91,7 @@ ${post.content.rendered}
       <h5 class="artist-hashtags"> ${post.acf.add_hashtags} </h5>
       <section class="article-content">${post.content.rendered}</section>
       <button type="button" class="CTA-button pointer">
-      <a class="color-white" href="#tickets" onclick="showPage('tickets')">Go to Tickets
+      <a class="color-white" href="#tickets" onclick="showPage('tickets')">Get Your Ticket
         </a>
       </button>
       </div>

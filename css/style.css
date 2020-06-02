@@ -462,7 +462,7 @@ button {
   background-color: white;
 }
 
-#home-header {
+#artists-header {
   width: 100%;
   max-width: 100%;
   height: 10vh;
@@ -472,7 +472,7 @@ button {
   transform: rotate(180deg);
 }
 
-#home-header-arrow {
+#artists-header-arrow {
   -webkit-animation: upDown 1.5s infinite alternate;
   animation: upDown 1.5s infinite alternate;
 }
@@ -497,7 +497,7 @@ button {
   }
 }
 
-#home-footer {
+#artists-footer {
   width: 100%;
   max-width: 100%;
   height: 10vh;
@@ -506,7 +506,7 @@ button {
   justify-content: center;
 }
 
-#home-footer p {
+#artists-footer p {
   color: white;
   text-decoration: none;
 }
@@ -539,6 +539,14 @@ button {
   height: 100%;
 }
 
+.grid-container-header {
+  text-align: center;
+  font-size: x-large;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
 
 #grid-container {
   width: 100vw;
@@ -1116,7 +1124,7 @@ button {
     height: 180%;
   }
 
-  #home {
+  #artists {
     margin-top: 12vh !important;
   }
 
@@ -1131,11 +1139,11 @@ button {
     width: 50vw;
   }
 
-  #home {
+  #artists {
     margin-top: 12vh;
   }
 
-  #home-header {
+  #artists-header {
     display: none;
   }
 

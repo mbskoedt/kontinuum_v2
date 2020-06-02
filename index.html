@@ -16,14 +16,14 @@
   <div class="site-container">
     <!-- snippet from https://codepen.io/mutedblues/pen/MmPNPG -->
     <header id="header" class="header">
-      <a href="#home" onclick="showPage('home')" class="logo">
+      <a href="#artists" onclick="showPage('artists')" class="logo">
         <img id="logo_1" src="img/logo-kontinuum.jpg" alt="logo">
         <img id="logo_2" src="img/logo-kontinuum-with-text.png" alt="logo">
       </a>
       <input class="menu-btn" type="checkbox" id="menu-btn" />
       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
       <ul id="menu" class="menu">
-        <li> <a href="#home" onclick="showPage('home')">ARTISTS</a></li>
+        <li> <a href="#artists" onclick="showPage('artists')">ARTISTS</a></li>
         <li> <a href="#tickets" onclick="showPage('tickets')">TICKETS</a></li>
         <li> <a href="#location" onclick="showPage('location')">LOCATION</a> </li>
         <li> <a href="#about" onclick="showPage('about')">ABOUT</a> </li>
@@ -59,22 +59,22 @@
     </div>
     <!-- pages -->
     <div id="pages-wrapper">
-      <!-- home page -->
-      <article id="home" class="page">
-        <div id="home-header" class="background-color-black" onclick="goToArtists()">
-          <div id="home-header-arrow" class="read-more-triangle color-white"></div>
+      <!-- artists page -->
+      <article id="artists" class="page">
+        <div id="artists-header" class="background-color-black" onclick="goToArtists()">
+          <div id="artists-header-arrow" class="read-more-triangle color-white"></div>
         </div>
 
-          <div class="welcome-post">
-            <video autoplay loop muted>
-              <source src="video/bgr-video.mp4" type="video/mp4">
-            </video>
-          </div>
-
+        <div class="welcome-post">
+          <video autoplay loop muted>
+            <source src="video/bgr-video.mp4" type="video/mp4">
+          </video>
+        </div>
+        <h3 class="grid-container-header">ARTISTS</h3>
         <div id="grid-container">
         </div>
 
-        <div id="home-footer" class="background-color-black pointer" onclick="toTheTop()">
+        <div id="artists-footer" class="background-color-black pointer" onclick="toTheTop()">
           <p>Back to top of page</p>
         </div>
 

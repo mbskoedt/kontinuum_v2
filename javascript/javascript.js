@@ -13,7 +13,7 @@ function showPage(pageId) {
   hideAllPages();
   document.querySelector(`#${pageId}`).style.display = "block";
   let headerHeight = document.getElementById('header').offsetHeight - document.getElementById('menu').offsetHeight;
-  if (pageId === "home") {
+  if (pageId === "artists") {
     document.querySelector(`#${pageId}`).style.marginTop = "90vh";
   } else {
     document.querySelector(`#${pageId}`).style.marginTop = headerHeight + "px";
@@ -25,7 +25,7 @@ function showPage(pageId) {
 
 // set default page
 function setDefaultPage() {
-  let page = "home";
+  let page = "artists";
   if (location.hash) {
     page = location.hash.slice(1);
   }
@@ -63,7 +63,7 @@ $(".toggle").on("click", function() {
 // go to artist window from arrow
 
 function goToArtists() {
-  let artistWindow = document.getElementById("home-header");
+  let artistWindow = document.getElementById("artists-header");
   artistWindow.scrollIntoView();
 }
 
