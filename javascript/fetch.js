@@ -132,7 +132,6 @@ ${post.content.rendered}
     `;
     }
   }
-  window.instgrm.Embeds.process();
 }
 
 // Button animation
