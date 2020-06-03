@@ -1,18 +1,5 @@
 "use strict";
 
-var cubeNumber = 1;
-
-var canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
-
-function plusOneCubeNumber() {
-  cubeNumber++;
-  console.log(canvas)
-  console.log(context)
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  mediaQuery(x);
-}
-
 var x = window.matchMedia("(max-width: 780px)")
 x.addListener(mediaQuery) // Attach listener function on state changes
 
@@ -50,7 +37,7 @@ function mediaQuery(x) {
 
   // Add sphere
 
-  var geometry = new THREE.SphereGeometry(
+  var geometry = new THREE.SphereBufferGeometry(
     30, 100, 100, 0, Math.PI * 2, 0, Math.PI * 2
   );
   var material = new THREE.MeshPhongMaterial({
@@ -65,21 +52,18 @@ function mediaQuery(x) {
 
   square = new THREE.Object3D();
 
-  var geometry_2 = new THREE.BoxGeometry(45, 45, 45);
+  var geometry_2 = new THREE.BoxBufferGeometry(45, 45, 45);
   var material_2 = new THREE.MeshPhongMaterial({
     color: 0x991aa2,
     shading: THREE.FlatShading
   });
   var square = new THREE.Mesh()
 
-  for (var i = 0; i < cubeNumber; i++) {
-    var mesh = new THREE.Mesh(geometry_2, material_2);
-    mesh.position.set(Math.random(), Math.random(), Math.random());
-    mesh.position.multiplyScalar(0);
-    mesh.rotation.set(Math.random(), Math.random(), Math.random());
-    square.add(mesh);
-    scene.add(square);
-  }
+  var mesh = new THREE.Mesh(geometry_2, material_2);
+
+  square.add(mesh);
+  scene.add(square);
+
   // Add lights
 
   var ambientLight = new THREE.AmbientLight(0x999999);
