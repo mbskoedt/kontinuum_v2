@@ -90,7 +90,7 @@ ${post.content.rendered}
       <div class="sub-tabs-content">
       <h5 class="artist-hashtags"> ${post.acf.add_hashtags} </h5>
       <section class="article-content">
-<div class="divider div-transparent div-dot"></div>
+
       ${post.content.rendered}
       <button type="button" class="CTA-button pointer">
       <a class="color-white" href="#tickets" onclick="showPage('tickets')">Get Your Ticket
@@ -107,7 +107,7 @@ ${post.content.rendered}
       <h3>${post.title.rendered}</h3>
       <div class="sub-tabs-content">
       <h5 class="artist-hashtags"> ${post.acf.add_hashtags} </h5>
-      <div class="divider div-transparent div-dot"></div>
+
     <section class="article-content">${post.content.rendered}</section>
     </div>
     </div>
@@ -119,7 +119,7 @@ ${post.content.rendered}
       <h3>${post.title.rendered}</h3>
       <div class="sub-tabs-content">
       <h5 class="artist-hashtags"> ${post.acf.add_hashtags} </h5>
-      <div class="divider div-transparent div-dot"></div>
+
     <section class="article-content">${post.content.rendered}</section>
     </div>
     </div>
@@ -131,7 +131,7 @@ ${post.content.rendered}
       <h3>${post.title.rendered}</h3>
       <div class="sub-tabs-content">
       <h5 class="artist-hashtags"> ${post.acf.add_hashtags} </h5>
-      <div class="divider div-transparent div-dot"></div>
+
     <section class="article-content">${post.content.rendered}</section>
     </div>
     </div>

@@ -212,12 +212,12 @@ button, button p {
 }
 
 blockquote {
-  min-width: 0px!important;
+  min-width: 0px !important;
 }
 
 /* ----- CUSTOM VIDEO ---- */
 video {
-  width: 50vw!important;
+  height: 100%;
 }
 
 /* ---- GENEREL HTML ---- */
@@ -546,11 +546,6 @@ button {
   overflow: hidden;
 }
 
-.welcome-post video {
-  max-width: 150%;
-  height: 100%;
-}
-
 .grid-container-header {
   text-align: center;
   font-size: x-large;
@@ -623,8 +618,6 @@ button {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #ffffff;
-  background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
 }
 
 .box-information h5 {
@@ -801,6 +794,11 @@ button {
   margin-bottom: -10%;
 }
 
+.sub-tabs-container .article-content p {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .sub-tabs-content h5 {
   text-align: center;
   color: grey;
@@ -821,12 +819,15 @@ button {
   text-transform: uppercase;
 }
 
+.sub-tabs-content .artist-hashtags {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
 .sub-tabs-container section {
   display: flex;
   flex-direction: column;
 }
-
-
 
 /* --------- TICKETS TAB ------- */
 #ticket-container .sub-tabs-container,
@@ -838,10 +839,14 @@ button {
   min-height: 60vh;
 }
 
+/* ------ LOCATION ----- */
+.sub-tabs-container video {
+  width: 100vw;
+}
+
 /* ------- CONTACTS TAB ----- */
 #contact .article-content {
   text-align: center !important;
-  align-items: center !important;
 }
 
 /* ------ FOOTER ----- */
@@ -870,7 +875,6 @@ button {
   justify-content: center;
   padding: 10px;
   margin-bottom: 12px;
-  background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
 }
 
 .sub-footer {
@@ -958,6 +962,11 @@ button {
   }
 
   /* ---- page styling --- */
+  .welcome-post video {
+    width: 100vw;
+    height: auto;
+  }
+
   .article-content {
     max-width: 100%
   }
@@ -995,19 +1004,14 @@ button {
   /* ----- TABS ----- */
   .sub-tabs-container h5 {
     width: 70%;
-    margin-top: 2%;
-    margin-bottom: 1%;
   }
 
   .sub-tabs-container .article-content {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-
-  .sub-tabs-container .article-content p {
-    margin-left: 10%;
-    margin-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
 
   .sub-tabs-container .article-content button {
@@ -1024,6 +1028,7 @@ button {
     text-align: justify;
     margin: 0;
   }
+
 
   /*----- FOOTER ---- */
   .footer-nav .sub-footer {
@@ -1144,17 +1149,6 @@ button {
   /* ------- Page styling -------- */
   .page {
     width: 50vw;
-    background-color: #ffffff;
-    /*  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-    /*    background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  /*  background-image: url("https://www.transparenttextures.com/patterns/mirrored-squares.png");
-    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-    /* background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-    /* background-image: url("https://www.transparenttextures.com/patterns/nistri.png");
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   }
 
   .welcome-post {
@@ -1162,8 +1156,8 @@ button {
   }
 
   .welcome-post video {
-    max-width: 120%;
-    height: 180%;
+    min-height: 100%;
+    max-height: 120%;
   }
 
   #artists {
@@ -1226,8 +1220,12 @@ button {
     min-height: 100%;
   }
 
-.article-content {
+  .article-content {
     align-items: stretch;
+  }
+
+  .sub-tabs-container video {
+    width: 50vw;
   }
 
   /* ------- Footer ------ */
