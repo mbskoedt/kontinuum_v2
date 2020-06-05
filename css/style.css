@@ -13,16 +13,16 @@
 }
 
 #loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
 }
 
 #loading video {
@@ -559,9 +559,38 @@ button {
 .welcome-post {
   width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-bottom: 5%;
+  background-color: black;
+}
+
+.welcome-post video {
+  width: 140%;
+}
+
+#hero-video {}
+
+.welcome-post button {
+  z-index: 20;
+  font-size: x-large;
+  color: white;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.welcome-post button strong {
+  color: var(--green);
+}
+
+.welcome-post button b {
+  color: var(--red);
 }
 
 .welcome-post img {
@@ -862,6 +891,11 @@ button {
   min-height: 60vh;
 }
 
+.sub-tabs-container .article-content button {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
 /* ------ LOCATION ----- */
 .sub-tabs-container video {
   width: 100vw;
@@ -990,8 +1024,7 @@ button {
 
   /* ---- page styling --- */
   .welcome-post video {
-    width: 100vw;
-    height: auto;
+    width: 100%
   }
 
   .article-content {
@@ -1181,11 +1214,6 @@ button {
     width: 50vw;
   }
 
-  .welcome-post video {
-    min-height: 100%;
-    max-height: 120%;
-  }
-
   #artists {
     margin-top: 12vh !important;
   }
@@ -1254,6 +1282,10 @@ button {
     width: 50vw;
   }
 
+  .sub-tabs-container .article-content button {
+    width: 30%;
+  }
+
   /* ------- Footer ------ */
   #footer {
     width: 50vw;
@@ -1278,7 +1310,6 @@ button {
 }
 
 @media (min-width: 1700px) {
-
   #loading video {
     width: 15vw;
   }
@@ -1323,5 +1354,9 @@ button {
 
   .sub-tabs-content .article-content p {
     max-width: 100% !important;
+  }
+
+  .sub-tabs-container .article-content button {
+    width: 20%;
   }
 }

@@ -96,3 +96,14 @@ function closeCookies() {
     let cookieAlert = document.getElementById("cookie-alert");
     cookieAlert.classList.add("displayNone");
 }
+
+// video player
+
+var myVideo = document.getElementById("hero-video");
+
+function playPause() {
+  if (myVideo.paused)
+    myVideo.play();
+  else
+    myVideo.pause();
+}

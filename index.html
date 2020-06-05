@@ -73,11 +73,13 @@
         </div>
 
         <div class="welcome-post">
-          <!--<video autoplay loop muted>
-            <source src="video/bgr-video.mp4" type="video/mp4">
-          </video>-->
-
+          <video id="hero-video">
+            <source src="video/hero-video-kontinuum.mp4" type="video/mp4">
+          </video>
+           <button onclick="playPause()"><strong>PLAY</strong> | <b>PAUSE</b></button>
+          <!--
           <img src="img/hero-image.jpg">
+        -->
         </div>
         <h3 class="grid-container-header">ARTISTS</h3>
         <div id="grid-container">
@@ -143,7 +145,7 @@
     </div>
 
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
   <script src="javascript/fetch.js"></script>
   <script src="./build/three.min.js"></script>
   <script src="javascript/three_custom.js"></script>
