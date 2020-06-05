@@ -45,18 +45,24 @@ function setActiveTab(pageId) {
   }
 }
 
-setDefaultPage();
+function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 1000);
 
-/*
-let headerHeight = document.getElementById('header').offsetHeight;
-console.log(headerHeight);
-document.getElementById('pages-wrapper').style.marginTop = headerHeight + "px";
-*/
+    function checkReady() {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalID);
+            callback.call(this);
+        }
+    }
+}
 
-// Burgermenu functionallity
+function show(id, value) {
+    document.getElementById(id).style.display = value ? 'block' : 'none';
+}
 
-$(".toggle").on("click", function() {
-  $(".toggle").parent().toggleClass('active');
+onReady(function () {
+  setDefaultPage();
+  show('loading', false);
 });
 
 
