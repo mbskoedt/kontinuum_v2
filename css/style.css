@@ -69,14 +69,6 @@
   color: black;
 }
 
-.margin-right {
-  margin-right: 10px;
-}
-
-.margin-left {
-  margin-left: 5px;
-}
-
 .pointer {
   cursor: pointer;
 }
@@ -466,6 +458,7 @@ button {
 }
 
 #CTA-about {
+  display: none;
   margin-top: 5px;
   color: white;
 }
@@ -563,47 +556,36 @@ button {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-bottom: 5%;
-  background-color: black;
 }
 
 .welcome-post video {
   width: 140%;
 }
 
-#hero-video {}
+.hero-video-custom-player {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.welcome-post button {
-  z-index: 20;
-  font-size: x-large;
+.hero-video-custom-player a {
   color: white;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
+  text-decoration: none;
 }
 
-.welcome-post button strong {
-  color: var(--green);
+.welcome-post .fas {
+  font-size: 30px;
+  color: white;
 }
 
-.welcome-post button b {
-  color: var(--red);
-}
-
-.welcome-post img {
-  width: 100%;
+.welcome-post .play-pause-container i {
+  margin-right: 40px;
 }
 
 .grid-container-header {
   text-align: center;
   font-size: x-large;
-  /*
-  background-color: black;
-  color: white;
-  */
   margin: 0;
   padding: 20px;
 }
@@ -1021,6 +1003,15 @@ button {
   .header #logo_1 {
     width: 35%;
   }
+
+/* --- read more button show on bigger devices ---*/
+
+  #CTA-about {
+    display: block;
+    margin-top: 5px;
+    color: white;
+  }
+
 
   /* ---- page styling --- */
   .welcome-post video {

@@ -1,3 +1,5 @@
+"use strict";
+
 // fetch data from WP
 
 fetch("https://blog.kontinuum.one/wp-json/wp/v2/posts")

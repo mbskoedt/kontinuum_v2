@@ -1,3 +1,33 @@
+"use strict";
+
+// loading screen
+
+var loadingScreen = document.getElementById("loading-screen");
+
+function playOnLoad() {
+  loadingScreen.play();
+}
+
+function onReady(callback) {
+  var intervalID = window.setInterval(checkReady, 2500);
+
+  function checkReady() {
+    if (document.getElementsByTagName('body')[0] !== undefined) {
+      window.clearInterval(intervalID);
+      callback.call(this);
+    }
+  }
+}
+
+function show(id, value) {
+  document.getElementById(id).style.display = value ? 'block' : 'none';
+}
+
+onReady(function() {
+  setDefaultPage();
+  show('loading', false);
+});
+
 // SPA
 
 // hide all pages
@@ -45,26 +75,6 @@ function setActiveTab(pageId) {
   }
 }
 
-function onReady(callback) {
-    var intervalID = window.setInterval(checkReady, 4000);
-
-    function checkReady() {
-        if (document.getElementsByTagName('body')[0] !== undefined) {
-            window.clearInterval(intervalID);
-            callback.call(this);
-        }
-    }
-}
-
-function show(id, value) {
-    document.getElementById(id).style.display = value ? 'block' : 'none';
-}
-
-onReady(function () {
-  setDefaultPage();
-  show('loading', false);
-});
-
 
 // go to artist window from arrow
 
@@ -86,24 +96,25 @@ function collapseMenu() {
 
 // gives 100 pixels to href-requests
 
-window.addEventListener("hashchange", function () {
-    window.scrollTo(window.scrollX, window.scrollY - 100);
+window.addEventListener("hashchange", function() {
+  window.scrollTo(window.scrollX, window.scrollY - 100);
 });
 
 // close cookies
 
 function closeCookies() {
-    let cookieAlert = document.getElementById("cookie-alert");
-    cookieAlert.classList.add("displayNone");
+  let cookieAlert = document.getElementById("cookie-alert");
+  cookieAlert.classList.add("displayNone");
 }
 
-// video player
+// show/hide video player
 
-var myVideo = document.getElementById("hero-video");
+let heroVideo = document.getElementById("hero-video");
 
-function playPause() {
-  if (myVideo.paused)
-    myVideo.play();
-  else
-    myVideo.pause();
+function showControls() {
+  heroVideo.setAttribute("controls", "controls")
+}
+
+function removeControls() {
+  heroVideo.removeAttribute("controls")
 }
