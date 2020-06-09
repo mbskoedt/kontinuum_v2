@@ -174,9 +174,12 @@ button, button p {
   text-decoration: none;
 }
 
-.cookie-alert button div {
-  padding-right: 8px;
-  padding-left: 8px;
+.cookie-description {
+  margin-right: 5px;
+}
+
+.cookie-options button .color-white {
+  margin: 0 !important;
 }
 
 .close {
@@ -1004,14 +1007,12 @@ button {
     width: 35%;
   }
 
-/* --- read more button show on bigger devices ---*/
-
+  /* --- read more button show on bigger devices ---*/
   #CTA-about {
     display: block;
     margin-top: 5px;
     color: white;
   }
-
 
   /* ---- page styling --- */
   .welcome-post video {

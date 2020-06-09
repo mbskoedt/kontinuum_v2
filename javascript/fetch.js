@@ -59,6 +59,7 @@ function appendPosts(posts) {
   </div>
   <article id="${post.id}" class="more-info">
     <section class="article-content">${post.content.rendered}</section>
+
   </article>
   `;
     }
